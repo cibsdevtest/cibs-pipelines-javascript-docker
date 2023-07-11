@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: cibsdevtestcibspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cibsdevtestcibspipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: cibsdevtestcibspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: cibsdevtestcibspipelinesjavascriptdocker 
+          image: cibsacr.azurecr.io/cibsdevtestcibspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
